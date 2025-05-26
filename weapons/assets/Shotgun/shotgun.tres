@@ -3,6 +3,5 @@
 [ext_resource type="Texture2D" uid="uid://bn3uoorpq31k7" path="res://weapons/assets/Shotgun/shotgun_Material_baseColor.png" id="1_prv60"]
 
 [resource]
-shading_mode = 2
 albedo_texture = ExtResource("1_prv60")
 texture_filter = 2

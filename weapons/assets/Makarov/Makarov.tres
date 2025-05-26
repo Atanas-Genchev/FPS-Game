@@ -3,6 +3,5 @@
 [ext_resource type="Texture2D" uid="uid://b4uyp3fntkvjv" path="res://weapons/assets/Makarov/Makarov_Combined_Diffuse.png" id="1_epbss"]
 
 [resource]
-shading_mode = 2
 albedo_texture = ExtResource("1_epbss")
 texture_filter = 0

@@ -3,5 +3,4 @@
 [ext_resource type="Texture2D" uid="uid://dblhn8aikhvp6" path="res://environment/assets/materials/coffee machine_vending.png" id="1_bsj2g"]
 
 [resource]
-shading_mode = 2
 albedo_texture = ExtResource("1_bsj2g")

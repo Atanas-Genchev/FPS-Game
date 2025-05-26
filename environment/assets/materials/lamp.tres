@@ -3,6 +3,5 @@
 [ext_resource type="Texture2D" uid="uid://wss8bu3aom51" path="res://environment/assets/materials/Lamp.png" id="1_rbkg0"]
 
 [resource]
-shading_mode = 2
 albedo_texture = ExtResource("1_rbkg0")
 texture_filter = 0

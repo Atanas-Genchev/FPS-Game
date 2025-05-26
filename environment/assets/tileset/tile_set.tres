@@ -4,7 +4,6 @@
 
 [resource]
 cull_mode = 2
-shading_mode = 2
 albedo_texture = ExtResource("1_ce36h")
 metallic_specular = 0.0
 texture_filter = 0

@@ -111,17 +111,17 @@ spray_arc = 3.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0347735, 0, 0)
 
 [node name="Skeleton3D" parent="Graphics/JarMonster" index="1"]
-bones/0/position = Vector3(0.585943, 40.7495, 2.36595)
-bones/0/rotation = Quaternion(0.00720291, -0.283769, 0.0136992, 0.958768)
-bones/1/rotation = Quaternion(-0.0624742, 0.0412076, 0.00319565, 0.99719)
-bones/2/rotation = Quaternion(-0.00668001, 0.0622127, 0.00784167, 0.99801)
-bones/3/rotation = Quaternion(-0.00714189, 0.0622293, 0.00706153, 0.998011)
-bones/4/rotation = Quaternion(0.183689, -0.0104526, 0.0699222, 0.980439)
-bones/5/rotation = Quaternion(0.000735639, 0.110328, -0.0797228, 0.990692)
-bones/7/rotation = Quaternion(-0.501736, -0.497833, 0.424018, -0.566244)
-bones/8/rotation = Quaternion(0.357915, -0.0884892, 0.464372, 0.805249)
-bones/9/rotation = Quaternion(0.0229152, -0.065835, 0.400377, 0.913695)
-bones/10/rotation = Quaternion(-0.226168, -0.812857, -0.03841, 0.535385)
+bones/0/position = Vector3(0.279628, 41.0657, 2.65648)
+bones/0/rotation = Quaternion(0.0348783, -0.316839, 0.019471, 0.947638)
+bones/1/rotation = Quaternion(-0.0626898, 0.0433783, 0.00141153, 0.997089)
+bones/2/rotation = Quaternion(-0.00718321, 0.0658259, 0.00675532, 0.997782)
+bones/3/rotation = Quaternion(-0.00772339, 0.0658106, 0.00593262, 0.997785)
+bones/4/rotation = Quaternion(0.197935, -0.00400555, 0.0616758, 0.978265)
+bones/5/rotation = Quaternion(-0.0384732, 0.122473, -0.0700844, 0.989246)
+bones/7/rotation = Quaternion(-0.505915, -0.494524, 0.429637, -0.561168)
+bones/8/rotation = Quaternion(0.352383, -0.121315, 0.429219, 0.822727)
+bones/9/rotation = Quaternion(0.0238436, -0.063477, 0.416597, 0.906559)
+bones/10/rotation = Quaternion(-0.200286, -0.835033, -0.0407952, 0.510824)
 bones/11/rotation = Quaternion(0.180244, -0.0375588, -0.0600833, 0.981067)
 bones/12/rotation = Quaternion(-0.00417332, 0.0164456, 0.12169, 0.992423)
 bones/13/rotation = Quaternion(-0.026419, -0.0195624, 0.0565775, 0.997857)
@@ -131,54 +131,54 @@ bones/17/rotation = Quaternion(0.119352, 3.25106e-05, -0.0242114, 0.992557)
 bones/19/rotation = Quaternion(0.230235, -0.0244251, -0.0941896, 0.968258)
 bones/20/rotation = Quaternion(0.237123, -0.00398388, -0.0465182, 0.970357)
 bones/21/rotation = Quaternion(0.119356, 0.0015819, -0.0143675, 0.992746)
-bones/23/rotation = Quaternion(0.539081, -0.446465, 0.584456, 0.410454)
-bones/24/rotation = Quaternion(0.286544, 0.0503745, -0.759653, 0.581621)
-bones/25/rotation = Quaternion(0.00262552, 0.126896, -0.0769111, 0.988926)
-bones/26/rotation = Quaternion(-0.110976, 0.337506, -0.0772186, 0.931564)
+bones/23/rotation = Quaternion(0.532936, -0.458314, 0.560981, 0.437297)
+bones/24/rotation = Quaternion(0.289648, 0.090265, -0.786771, 0.537539)
+bones/25/rotation = Quaternion(0.00152482, 0.130185, -0.0446673, 0.990482)
+bones/26/rotation = Quaternion(-0.128998, 0.24927, -0.0563058, 0.958151)
 bones/27/rotation = Quaternion(0.176755, 0.0273228, 0.0708322, 0.981323)
 bones/28/rotation = Quaternion(0.00733148, -0.0214108, -0.109413, 0.993739)
 bones/29/rotation = Quaternion(-0.0222825, 0.00624316, -0.0612017, 0.997857)
-bones/31/rotation = Quaternion(0.491128, 0.0696844, 0.127572, 0.858873)
-bones/32/rotation = Quaternion(0.488162, 0.00377011, 0.0253644, 0.872376)
-bones/33/rotation = Quaternion(0.252248, -0.00180935, 0.020794, 0.967438)
-bones/35/rotation = Quaternion(0.489731, 0.0786989, 0.114606, 0.860718)
-bones/36/rotation = Quaternion(0.488123, 0.00581656, 0.0479227, 0.871439)
-bones/37/rotation = Quaternion(0.252204, -0.00537547, 0.010237, 0.967605)
-bones/39/rotation = Quaternion(0.11281, 0.358749, 0.913441, -0.155557)
-bones/40/rotation = Quaternion(-0.20989, -0.0528274, 0.0397826, 0.975486)
-bones/41/rotation = Quaternion(0.137049, -0.0190758, 0.0967136, 0.985647)
-bones/42/rotation = Quaternion(0.479915, -0.0336811, 0.00772523, 0.876634)
-bones/44/rotation = Quaternion(-0.263552, -0.0448896, 0.929901, 0.252604)
-bones/45/rotation = Quaternion(-0.314857, 0.0685304, -0.0577858, 0.944897)
-bones/46/rotation = Quaternion(0.503355, 0.232265, 0.1221, 0.823273)
-bones/47/rotation = Quaternion(0.426, 0.0273433, -0.005467, 0.904293)
+bones/31/rotation = Quaternion(0.340358, 0.0471118, 0.130943, 0.929941)
+bones/32/rotation = Quaternion(0.335056, 0.00222612, 0.0211801, 0.941958)
+bones/33/rotation = Quaternion(0.170012, -0.00060504, 0.0183001, 0.985272)
+bones/35/rotation = Quaternion(0.339331, 0.0538335, 0.116631, 0.931855)
+bones/36/rotation = Quaternion(0.335039, 0.00314475, 0.0452645, 0.941111)
+bones/37/rotation = Quaternion(0.169976, -0.00355432, 0.00768939, 0.985412)
+bones/39/rotation = Quaternion(0.112701, 0.361093, 0.909569, -0.172029)
+bones/40/rotation = Quaternion(-0.207678, -0.0707372, 0.0516503, 0.974268)
+bones/41/rotation = Quaternion(0.163909, -0.0289922, 0.0813135, 0.982691)
+bones/42/rotation = Quaternion(0.464739, -0.0304753, 0.0075327, 0.884891)
+bones/44/rotation = Quaternion(-0.253501, -0.00595042, 0.934653, 0.249251)
+bones/45/rotation = Quaternion(-0.311128, 0.0702218, -0.0532168, 0.946275)
+bones/46/rotation = Quaternion(0.48484, 0.215932, 0.122831, 0.83858)
+bones/47/rotation = Quaternion(0.442558, 0.0312384, -0.00544602, 0.896179)
 
 [node name="Head" parent="Graphics/JarMonster/Skeleton3D" index="0"]
-transform = Transform3D(0.998343, -0.0572465, -0.00578579, 0.05484, 0.977137, -0.205419, 0.0174131, 0.204761, 0.978657, -0.610321, 75.9512, 1.7368)
+transform = Transform3D(0.996268, -0.0826708, -0.0248266, 0.0758395, 0.97569, -0.205614, 0.0412214, 0.202964, 0.978318, -1.54145, 76.1451, 4.00488)
 
 [node name="Neck" parent="Graphics/JarMonster/Skeleton3D" index="1"]
-transform = Transform3D(0.951033, -0.213946, -0.223079, 0.162436, 0.959974, -0.228177, 0.262967, 0.180768, 0.947719, 1.2299, 69.7973, -1.11718)
+transform = Transform3D(0.93976, -0.23061, -0.252331, 0.147984, 0.939865, -0.307823, 0.308144, 0.251939, 0.917373, 0.462429, 70.2646, 0.717629)
 
 [node name="Torso" parent="Graphics/JarMonster/Skeleton3D" index="2"]
-transform = Transform3D(0.970523, 0.0100034, -0.240802, 0.02432, 0.989973, 0.139144, 0.23978, -0.140899, 0.960548, 1.14207, 61.1048, 0.119996)
+transform = Transform3D(0.95659, -0.00103101, -0.291435, 0.0268455, 0.996054, 0.0845925, 0.290198, -0.088744, 0.952843, 0.471482, 61.5186, 1.49686)
 
 [node name="CollisionShape3D" parent="Graphics/JarMonster/Skeleton3D/Torso/HitBox" index="0"]
 transform = Transform3D(0.992065, 0.117522, 0.0446813, -0.116006, 0.992627, -0.0351342, -0.0484813, 0.0296723, 0.998383, 0.848471, -4.70944, 0.720571)
 
 [node name="LArm" parent="Graphics/JarMonster/Skeleton3D" index="3"]
-transform = Transform3D(0.896258, 0.0405787, -0.441673, -0.40455, -0.333439, -0.851562, -0.181826, 0.941898, -0.282431, 9.91557, 69.9265, 1.84152)
+transform = Transform3D(0.871274, 0.0638368, -0.486628, -0.434734, -0.359802, -0.82556, -0.227791, 0.930842, -0.285734, 9.00694, 70.2593, 4.11707)
 
 [node name="LFArm" parent="Graphics/JarMonster/Skeleton3D" index="4"]
-transform = Transform3D(0.569472, -0.626132, -0.532599, -0.63237, 0.0802539, -0.770498, 0.525176, 0.775576, -0.350245, 10.4112, 65.8535, 13.3468)
+transform = Transform3D(0.544179, -0.614439, -0.571256, -0.662431, 0.103157, -0.741987, 0.514835, 0.782191, -0.350888, 9.7867, 65.8643, 15.4873)
 
 [node name="RArm" parent="Graphics/JarMonster/Skeleton3D" index="5"]
-transform = Transform3D(0.714928, 0.0622141, 0.696425, 0.69868, -0.0252084, -0.71499, -0.0269267, 0.997744, -0.0614899, -7.40861, 66.7814, -3.48439)
+transform = Transform3D(0.715165, 0.101881, 0.69149, 0.694775, 0.00441311, -0.719213, -0.0763257, 0.994787, -0.0676282, -8.15546, 67.677, -2.12538)
 
 [node name="RFArm" parent="Graphics/JarMonster/Skeleton3D" index="6"]
-transform = Transform3D(0.498952, 0.16073, 0.851594, 0.851469, 0.0920815, -0.516258, -0.161394, 0.982693, -0.0909126, -6.64837, 66.4734, 8.70765)
+transform = Transform3D(0.500673, 0.159085, 0.850893, 0.853641, 0.07234, -0.515814, -0.143612, 0.984611, -0.0995831, -6.91052, 67.7309, 10.0305)
 
 [node name="RHand" parent="Graphics/JarMonster/Skeleton3D" index="7"]
-transform = Transform3D(-0.176736, -0.0312046, 0.983764, 0.942971, 0.281083, 0.178323, -0.282083, 0.959176, -0.0202523, -4.30801, 67.8142, 23.0165)
+transform = Transform3D(0.0137919, -0.0596189, 0.998126, 0.968587, 0.248671, 0.00146952, -0.248292, 0.966751, 0.0611757, -4.59411, 68.7842, 24.3672)
 
 [node name="Makarov" type="Node3D" parent="Graphics/JarMonster/Skeleton3D/RHand" index="0"]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 2.67643, 5.79494, 1.87128)
@@ -194,16 +194,16 @@ mesh = SubResource("ArrayMesh_yrg2u")
 skeleton = NodePath("")
 
 [node name="LUpLeg" parent="Graphics/JarMonster/Skeleton3D" index="8"]
-transform = Transform3D(-0.943289, -0.0101447, -0.331817, -0.230547, -0.699161, 0.676773, -0.238859, 0.714892, 0.657172, 4.43605, 37.6155, 5.2636)
+transform = Transform3D(-0.914532, -0.0153401, -0.404222, -0.270191, -0.720514, 0.638636, -0.301045, 0.693271, 0.654788, 4.01005, 37.8825, 5.65533)
 
 [node name="RUpLeg" parent="Graphics/JarMonster/Skeleton3D" index="9"]
-transform = Transform3D(-0.375764, -0.229919, -0.897741, 0.487041, -0.873155, 0.0197632, -0.788411, -0.42981, 0.440081, -3.44556, 37.4078, 0.0116217)
+transform = Transform3D(-0.342166, -0.235572, -0.909631, 0.493326, -0.868949, 0.0394672, -0.79972, -0.435241, 0.413538, -3.48534, 37.7512, -0.136743)
 
 [node name="LLeg" parent="Graphics/JarMonster/Skeleton3D" index="10"]
-transform = Transform3D(-0.964708, 0.180347, -0.191869, -0.239851, -0.902541, 0.357618, -0.108674, 0.391017, 0.913945, 4.20397, 21.6205, 21.6185)
+transform = Transform3D(-0.949539, 0.217765, -0.225731, -0.285404, -0.898366, 0.333891, -0.130079, 0.381467, 0.915184, 3.65911, 21.399, 21.5156)
 
 [node name="RLeg" parent="Graphics/JarMonster/Skeleton3D" index="11"]
-transform = Transform3D(-0.251098, 0.333663, -0.908636, 0.610405, -0.673951, -0.416167, -0.751235, -0.659135, -0.0344415, -8.70533, 17.433, -9.82098)
+transform = Transform3D(-0.212067, 0.334271, -0.918308, 0.607215, -0.691202, -0.391829, -0.765714, -0.640704, -0.0563931, -8.87442, 17.8727, -10.0936)
 
 [node name="AnimationPlayer" parent="Graphics/JarMonster" index="2"]
 libraries = {

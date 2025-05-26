@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://btserkbjh057o"]
+[gd_scene load_steps=24 format=3 uid="uid://btserkbjh057o"]
 
 [ext_resource type="MeshLibrary" uid="uid://cdqy2k8b04tk8" path="res://environment/assets/tileset/tileset.tres" id="1_yl73a"]
 [ext_resource type="PackedScene" uid="uid://x7bvna5he2bu" path="res://pickups/makarrov_pick_up.tscn" id="2_1y8me"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c7cytar1b73si" path="res://Characters/enemies/NurseMonster/nurse_monster.tscn" id="9_15wb7"]
 [ext_resource type="PackedScene" uid="uid://7jlthquhd1g7" path="res://pickups/smg_ammo_pick_up.tscn" id="9_s77qv"]
 [ext_resource type="PackedScene" uid="uid://dua6tlli0p8by" path="res://Characters/enemies/JarMonster/jar_monster_p.tscn" id="10_15wb7"]
+[ext_resource type="PackedScene" uid="uid://drsfucdsnnedf" path="res://Characters/enemies/JarMonster/jar_monster_sm.tscn" id="14_5hnhx"]
 
 [sub_resource type="Environment" id="Environment_a72st"]
 background_mode = 1
@@ -240,6 +241,9 @@ transform = Transform3D(-0.0300325, 0, -0.999549, 0, 1, 0, 0.999549, 0, -0.03003
 
 [node name="JarMonster_pistol4" parent="Enemies" instance=ExtResource("10_15wb7")]
 transform = Transform3D(0.815784, 0, -0.578356, 0, 1, 0, 0.578356, 0, 0.815784, 38.2185, 0.278914, -48.6207)
+
+[node name="JarMonster_sm" parent="Enemies" instance=ExtResource("14_5hnhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1566, 0.983104, 0.058762)
 
 [node name="Player" parent="." instance=ExtResource("6_0s5r2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)

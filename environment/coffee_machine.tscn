@@ -19,7 +19,7 @@ shape = SubResource("ConvexPolygonShape3D_w23q8")
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Graphics"]
-transform = Transform3D(1, 0, -4.65661e-09, 0, 1, 0, 3.72529e-09, 0, 1, 0.904006, 0.693734, 0.15361)
+transform = Transform3D(1, 0, -3.72529e-09, 0, 1, 0, 3.72529e-09, 0, 1, 1.8069, 1.03426, 0.15361)
 light_color = Color(0.0306019, 0.173532, 0.412629, 1)
 light_energy = 5.556
 shadow_enabled = true

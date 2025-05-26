@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://d2r5hnjgbngsy" path="res://Characters/enemies/NurseMonster/NurseMonsterTexture.png" id="1_u0ntj"]
 
 [resource]
-shading_mode = 2
 albedo_texture = ExtResource("1_u0ntj")
 metallic_specular = 0.0
 texture_filter = 2
