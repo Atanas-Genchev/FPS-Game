@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dquyt7y0i6wfd"]
+
+[ext_resource type="Texture2D" uid="uid://bgu31g4xnc4ll" path="res://pickups/assets/makarov_ammo_box_makarov_ammo_mox.png" id="1_dnbxe"]
+
+[resource]
+albedo_texture = ExtResource("1_dnbxe")
+texture_filter = 0

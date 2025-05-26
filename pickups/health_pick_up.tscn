@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh1iqgyvfi0j"]
+
+[ext_resource type="PackedScene" uid="uid://cs83ar82p7q16" path="res://pickups/pick_up.tscn" id="1_iw1et"]
+[ext_resource type="PackedScene" uid="uid://cmsufxo262flq" path="res://pickups/assets/health_pack.glb" id="2_me0j6"]
+
+[node name="HealthPickUp" instance=ExtResource("1_iw1et")]
+pick_up_type = 0
+pick_up_amount = 25
+
+[node name="health_pack" parent="Graphics" index="0" instance=ExtResource("2_me0j6")]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4dwth8pgb87a"]
+
+[ext_resource type="PackedScene" uid="uid://cs83ar82p7q16" path="res://pickups/pick_up.tscn" id="1_5yhf7"]
+[ext_resource type="PackedScene" uid="uid://dgucvf4r2f2y5" path="res://pickups/assets/sg_ammo.glb" id="2_7vnde"]
+
+[node name="ShotgunAmmoPickUp" instance=ExtResource("1_5yhf7")]
+weapon_type = 1
+pick_up_amount = 8
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Graphics" parent="." index="1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0218978, 0.0262353, -0.0230982)
+
+[node name="sg_ammo" parent="Graphics" index="0" instance=ExtResource("2_7vnde")]
+transform = Transform3D(1.90697, 0, -5.96046e-08, 0, 1.90697, 0, 5.96046e-08, 0, 1.90697, 0, -0.0990549, 0)
+
+[node name="sg_ammo2" parent="Graphics" index="1" instance=ExtResource("2_7vnde")]
+transform = Transform3D(1.90697, 0, -5.96046e-08, 0, 1.90697, 0, 5.96046e-08, 0, 1.90697, 0, -0.0990549, 0.172299)

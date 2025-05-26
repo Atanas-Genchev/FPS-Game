@@ -1,0 +1,105 @@
+[gd_scene load_steps=18 format=3 uid="uid://0dhe3gjbitcc"]
+
+[ext_resource type="Script" uid="uid://d20ltg0uaqkir" path="res://world.gd" id="1_ioo17"]
+[ext_resource type="PackedScene" uid="uid://bosesbvnakx3t" path="res://Characters/Player/player.tscn" id="5_l8cp7"]
+[ext_resource type="PackedScene" uid="uid://deudy2l8vlpgx" path="res://pickups/smg_pick_up.tscn" id="7_gbfbk"]
+[ext_resource type="PackedScene" uid="uid://d4dwth8pgb87a" path="res://pickups/shotgun_ammo_pick_up.tscn" id="8_gbfbk"]
+[ext_resource type="PackedScene" uid="uid://7jlthquhd1g7" path="res://pickups/smg_ammo_pick_up.tscn" id="8_ioo17"]
+[ext_resource type="PackedScene" uid="uid://dh1iqgyvfi0j" path="res://pickups/health_pick_up.tscn" id="9_70uel"]
+[ext_resource type="PackedScene" uid="uid://x7bvna5he2bu" path="res://pickups/makarrov_pick_up.tscn" id="10_ic0uy"]
+[ext_resource type="Texture2D" uid="uid://ufk3fqirwyt4" path="res://environment/assets/kenney_prototype-textures/Vector/texture_01.svg" id="10_wse8f"]
+[ext_resource type="PackedScene" uid="uid://bsd0meo161wed" path="res://pickups/makarov_ammo_pick_up.tscn" id="11_k3n1d"]
+[ext_resource type="PackedScene" uid="uid://dtrph1680ha30" path="res://pickups/shotgun_pick_up.tscn" id="14_cbp6q"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_vp5gi"]
+geometry_source_geometry_mode = 1
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gjlv8"]
+
+[sub_resource type="Sky" id="Sky_0g27o"]
+sky_material = SubResource("ProceduralSkyMaterial_gjlv8")
+
+[sub_resource type="Environment" id="Environment_hojj7"]
+background_mode = 2
+sky = SubResource("Sky_0g27o")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ic0uy"]
+albedo_texture = ExtResource("10_wse8f")
+uv1_scale = Vector3(1.23, 4.31, 11.43)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3n1d"]
+albedo_texture = ExtResource("10_wse8f")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2o6r5"]
+albedo_texture = ExtResource("10_wse8f")
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_ioo17")
+
+[node name="Environment" type="Node3D" parent="." groups=["navigation_mesh_source_group"]]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_vp5gi")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_hojj7")
+
+[node name="Player" parent="." instance=ExtResource("5_l8cp7")]
+
+[node name="PickUps" type="Node3D" parent="."]
+
+[node name="ShotgunAmmoPickUp" parent="PickUps" instance=ExtResource("8_gbfbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9069, 0.454636, -0.37261)
+
+[node name="HealthPickUp" parent="PickUps" instance=ExtResource("9_70uel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5284, 0.149022, 14.7926)
+
+[node name="ShotgunPickUp" parent="PickUps" instance=ExtResource("14_cbp6q")]
+transform = Transform3D(2.54096, 0, 0, 0, 2.54096, 0, 0, 0, 2.54096, 15.2421, 0.332325, 2.04766)
+
+[node name="MakarovPickUp" parent="PickUps" instance=ExtResource("10_ic0uy")]
+transform = Transform3D(2.16601, 0, 0, 0, 2.16601, 0, 0, 0, 2.16601, 14.1466, 0.399844, 7.64895)
+
+[node name="MakarovAmmoPickUp" parent="PickUps" instance=ExtResource("11_k3n1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6187, 0.169197, 8.2776)
+
+[node name="PickUp" parent="PickUps" instance=ExtResource("7_gbfbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4781, 0, 11.5221)
+
+[node name="PickUp2" parent="PickUps" instance=ExtResource("8_ioo17")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.635, 0, 12.3193)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.177563, 2.16257, -11.4278)
+use_collision = true
+flip_faces = true
+size = Vector3(36, 5, 24.848)
+material = SubResource("StandardMaterial3D_ic0uy")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.75579, 0, 6.79259)
+operation = 2
+flip_faces = true
+size = Vector3(1, 5, 11.2659)
+material = SubResource("StandardMaterial3D_k3n1d")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.6173, 0, 1.61782)
+operation = 2
+flip_faces = true
+size = Vector3(1, 5, 14.7741)
+material = SubResource("StandardMaterial3D_k3n1d")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.6301, 0, 1.61782)
+operation = 2
+flip_faces = true
+size = Vector3(1, 5, 14.7228)
+material = SubResource("StandardMaterial3D_k3n1d")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.756, 0, 6.793)
+operation = 2
+flip_faces = true
+size = Vector3(1, 5, 11.2659)
+material = SubResource("StandardMaterial3D_2o6r5")

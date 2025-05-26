@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://2ofr81veukna"]
+
+[ext_resource type="Texture2D" uid="uid://b7be1ia88x561" path="res://pickups/assets/healthpack_texture.png" id="1_os4n4"]
+
+[resource]
+resource_name = "HealthPackMaterial"
+albedo_texture = ExtResource("1_os4n4")
+metallic_specular = 0.0
+roughness = 0.0
+texture_filter = 2

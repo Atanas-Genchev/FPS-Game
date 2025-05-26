@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=4 uid="uid://7jlthquhd1g7"]
+
+[ext_resource type="PackedScene" uid="uid://cs83ar82p7q16" path="res://pickups/pick_up.tscn" id="1_yrv4n"]
+[ext_resource type="PackedScene" uid="uid://b2cjl0lwpfeow" path="res://pickups/assets/makarov_ammo_box.glb" id="2_813xl"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rm8nb"]
+load_path = "res://.godot/imported/makarov_ammo_box_makarov_ammo_mox.png-3160b2e4f67411bfb315c483342413c6.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ibdd"]
+albedo_color = Color(0.784314, 0.101961, 0.752941, 1)
+albedo_texture = SubResource("CompressedTexture2D_rm8nb")
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vpl2o"]
+_surfaces = [{
+"aabb": AABB(-0.2, -0.2, -0.2, 0.4, 0.28399, 0.86156),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAAAEAAEAAwAFAAIABQAAAAIABgAEAAAABQAGAAAABwABAAQABwADAAEABgAHAAQABQADAAcABQAHAAYA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAAAAP////8AAAAA//8AAAAAAAAAAP//AAD///////8AAAAAAAAAAAAA//8AAAAAAAD//wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_aeku0"]
+resource_name = "makarov_ammo_box_Cube"
+_surfaces = [{
+"aabb": AABB(-0.2, -0.2, -0.2, 0.4, 0.28399, 0.86156),
+"attribute_data": PackedByteArray("/X/6/7GyEICosv//AID/f0/hAsD///t/+//3v0fh/X/H2sh/tLru/KW663+X2ur89H/k/6eyAIChsvf//3/5f6za+H+vuvv8nrr9f67aA/1I4QPA7v/yf/T/BMBU4Q2A"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_4ibdd"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(2.00033, 2.00034, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////wAA+/8AAP/////4/wAA//8AAP//////////9v///wAA///4vwAA//////q/////////9b8AAAAA///+vwAAAAD//2XVAAD//wAAWtUAAP////9o1QAAAAAAAFbVAAAAAAAA/7///wAA////v///AAAAAP+/AAAAAP///7///wAAAABV1f///////1HV/////wAAV9X//wAA//9P1QAAAAAAAP///////wAA//8AAP//AAD/////AAAAAP//A4D9vwaA+7//f/+/CID6v/////////////////////9LVZaqUVWiqkhVkapTVaeqEAAhgAsAFoAUACiACAAPgKqqVlWoqlFVq6pYVaeqT1X4vwbA9L8KwADA/b/rvxLA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vpl2o")
+
+[node name="SmgAmmoPickUp" instance=ExtResource("1_yrv4n")]
+pick_up_type = 2
+weapon_type = 2
+pick_up_amount = 90
+
+[node name="makarov_ammo_box" parent="Graphics" index="0" instance=ExtResource("2_813xl")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, -0.0201435)
+
+[node name="Cube" parent="Graphics/makarov_ammo_box" index="0"]
+mesh = SubResource("ArrayMesh_aeku0")
+
+[editable path="Graphics/makarov_ammo_box"]

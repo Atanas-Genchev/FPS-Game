@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://by4l744hqaa3y"]
+
+[ext_resource type="PackedScene" uid="uid://byxeypjs2ad7p" path="res://weapons/projectiles/projectile.tscn" id="1_4lb27"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jsd0g"]
+shading_mode = 2
+albedo_color = Color(0.823529, 0.839216, 0, 1)
+emission_enabled = true
+emission = Color(0.823529, 0.839216, 0, 1)
+emission_energy_multiplier = 3.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_32iji"]
+material = SubResource("StandardMaterial3D_jsd0g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sutk2"]
+transparency = 1
+vertex_color_use_as_albedo = true
+
+[sub_resource type="Gradient" id="Gradient_6lk5e"]
+offsets = PackedFloat32Array(0.619205, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_f0pq4"]
+gradient = SubResource("Gradient_6lk5e")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_i0yb3"]
+particle_flag_rotate_y = true
+emission_shape = 1
+emission_sphere_radius = 0.4
+angle_max = 720.0
+angular_velocity_min = -10.0
+angular_velocity_max = 10.0
+gravity = Vector3(0, 0.1, 0)
+scale_min = 0.4
+scale_max = 0.7
+color = Color(0.509804, 0.509804, 0.509804, 0.694118)
+color_ramp = SubResource("GradientTexture1D_f0pq4")
+
+[sub_resource type="SphereMesh" id="SphereMesh_501uu"]
+radial_segments = 7
+rings = 3
+
+[node name="Pistol_bullet" instance=ExtResource("1_4lb27")]
+speed = 100
+show_after_time = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Graphics" index="0"]
+transform = Transform3D(0.05, 0, 0, 0, -8.74228e-09, -0.05, 0, 0.2, -2.18557e-09, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_32iji")
+
+[node name="ExplosionSmokeParticles" type="GPUParticles3D" parent="." index="2"]
+material_override = SubResource("StandardMaterial3D_sutk2")
+emitting = false
+amount = 5
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_i0yb3")
+draw_pass_1 = SubResource("SphereMesh_501uu")
+
+[connection signal="hit_something" from="." to="ExplosionSmokeParticles" method="restart"]

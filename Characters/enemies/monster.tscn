@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://caf5bpetmv4kt"]
+
+[ext_resource type="Script" uid="uid://0xlhlel3c0lx" path="res://Characters/enemies/monster.gd" id="1_5l5gj"]
+[ext_resource type="PackedScene" uid="uid://kry43mb8dukk" path="res://Characters/health_manager.tscn" id="1_wnksw"]
+[ext_resource type="PackedScene" uid="uid://7i5jnljrad3o" path="res://Characters/enemies/ai_character_mover.tscn" id="2_x0xrk"]
+[ext_resource type="PackedScene" uid="uid://dws7nn5h4hj3a" path="res://Characters/enemies/vision_manager.tscn" id="3_2633j"]
+[ext_resource type="AudioStream" uid="uid://ceyrcsqutj344" path="res://SFX/monster/hurt1.wav" id="4_gehma"]
+[ext_resource type="AudioStream" uid="uid://cth0wi3il6hrd" path="res://SFX/monster/hurt2.wav" id="5_347wo"]
+[ext_resource type="PackedScene" uid="uid://c5wg4gnyejteh" path="res://weapons/bullet_emitters/bullet_emitter.tscn" id="5_isgl1"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_fhm5d"]
+random_pitch = 1.1
+streams_count = 2
+stream_0/stream = ExtResource("4_gehma")
+stream_1/stream = ExtResource("5_347wo")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8f1j0"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cjbxk"]
+radius = 15.0
+
+[node name="Monster" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_5l5gj")
+
+[node name="AICharacterMover" parent="." instance=ExtResource("2_x0xrk")]
+
+[node name="HealthManager" parent="." instance=ExtResource("1_wnksw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2793, 0)
+max_health = 50
+
+[node name="HurtSound" type="AudioStreamPlayer3D" parent="HealthManager"]
+stream = SubResource("AudioStreamRandomizer_fhm5d")
+bus = &"SFX"
+
+[node name="DieSound" type="AudioStreamPlayer3D" parent="HealthManager"]
+bus = &"SFX"
+
+[node name="VisionManager" parent="." instance=ExtResource("3_2633j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.71543, 0)
+
+[node name="AttackEmitter" parent="." instance=ExtResource("5_isgl1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.443536)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_8f1j0")
+
+[node name="Graphics" type="Node3D" parent="."]
+
+[node name="NearbyMonstersAlertArea" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NearbyMonstersAlertArea"]
+shape = SubResource("SphereShape3D_cjbxk")
+
+[node name="AttackSound" type="AudioStreamPlayer3D" parent="."]
+bus = &"SFX"
+
+[node name="AlertSound" type="AudioStreamPlayer3D" parent="."]
+bus = &"SFX"

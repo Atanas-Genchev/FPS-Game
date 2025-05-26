@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cfh0ks086hnml"]
+
+[ext_resource type="Texture2D" uid="uid://fssxa4kjwnan" path="res://environment/assets/materials/bed.png" id="1_e50t3"]
+
+[resource]
+shading_mode = 2
+albedo_texture = ExtResource("1_e50t3")
+texture_filter = 2

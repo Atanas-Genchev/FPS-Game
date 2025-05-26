@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsd0meo161wed"]
+
+[ext_resource type="PackedScene" uid="uid://cs83ar82p7q16" path="res://pickups/pick_up.tscn" id="1_iiq6c"]
+[ext_resource type="PackedScene" uid="uid://b2cjl0lwpfeow" path="res://pickups/assets/makarov_ammo_box.glb" id="2_4b65o"]
+
+[node name="MakarovAmmoPickUp" instance=ExtResource("1_iiq6c")]
+pick_up_amount = 10
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Graphics" parent="." index="1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.1, 0)
+
+[node name="makarov_ammo_box" parent="Graphics" index="0" instance=ExtResource("2_4b65o")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -0.00205064, -0.1, -0.272039)

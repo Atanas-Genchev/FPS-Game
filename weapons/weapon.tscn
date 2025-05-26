@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpvng1gdo56vc"]
+
+[ext_resource type="Script" uid="uid://7ttcmmv8nyrk" path="res://weapons/weapon.gd" id="1_swcir"]
+[ext_resource type="PackedScene" uid="uid://c5wg4gnyejteh" path="res://weapons/bullet_emitters/bullet_emitter.tscn" id="2_o2wld"]
+
+[node name="Weapon" type="Node3D"]
+script = ExtResource("1_swcir")
+
+[node name="Graphics" type="Node3D" parent="."]
+transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 0, 0)
+rotation_edit_mode = 1
+
+[node name="BulletEmitter" parent="." instance=ExtResource("2_o2wld")]
+
+[node name="Crosshairs" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="EquipSound" type="AudioStreamPlayer" parent="SFX"]
+unique_name_in_owner = true
+bus = &"SFX"
+
+[node name="OutOfAmmoSound" type="AudioStreamPlayer" parent="SFX"]
+unique_name_in_owner = true
+pitch_scale = 0.7
+bus = &"SFX"
+
+[node name="AttackSound" type="AudioStreamPlayer" parent="SFX"]
+unique_name_in_owner = true
+bus = &"SFX"

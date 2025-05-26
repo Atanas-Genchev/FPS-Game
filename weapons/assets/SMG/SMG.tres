@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cc5onesl4wyre"]
+
+[ext_resource type="Texture2D" uid="uid://b82d1uktb7dsv" path="res://weapons/assets/SMG/SMGTextureMap.png" id="1_0eykm"]
+
+[resource]
+shading_mode = 2
+albedo_texture = ExtResource("1_0eykm")
+metallic = 0.22

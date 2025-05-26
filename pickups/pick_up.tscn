@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs83ar82p7q16"]
+
+[ext_resource type="Script" uid="uid://bwcaw03wryr2p" path="res://pickups/pick_up.gd" id="1_i0hy6"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_g62aa"]
+
+[node name="PickUp" type="Area3D"]
+collision_layer = 16
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_i0hy6")
+pick_up_type = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_g62aa")
+
+[node name="Graphics" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)

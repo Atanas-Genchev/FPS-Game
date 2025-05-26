@@ -1,0 +1,98 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwhi2nn57vb0f"]
+
+[ext_resource type="Script" uid="uid://cghlwwtiic4pa" path="res://main_menu.gd" id="1_06t4h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7vrkn"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_fu7sn"]
+font_size = 19
+
+[node name="Main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="Level 1" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.0
+offset_top = 77.0
+offset_right = 94.0
+offset_bottom = 138.0
+grow_horizontal = 2
+text = "Level 1
+"
+
+[node name="Level 2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -30.5
+offset_right = 94.0
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Level 2"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = 44.5
+offset_right = 55.0
+offset_bottom = 105.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -43.5
+offset_right = 43.5
+offset_bottom = 19.0
+grow_horizontal = 2
+text = "Test Build"
+label_settings = SubResource("LabelSettings_7vrkn")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -242.0
+offset_right = -90.0
+offset_bottom = 231.0
+grow_horizontal = 2
+text = "Controls
+Movement: wasd
+pistol: 1
+shotgun: 2
+SMG: 3
+look: mouse
+main menu: esc
+attack: mouse1
+retstart: z
+flash light: f"
+label_settings = SubResource("LabelSettings_fu7sn")
+
+[connection signal="pressed" from="Level 1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Level 2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

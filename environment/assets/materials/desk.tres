@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://davoul3b1o8ly"]
+
+[ext_resource type="Texture2D" uid="uid://d2ded17qvv1s6" path="res://environment/assets/materials/desk.jpg" id="1_ongke"]
+
+[resource]
+shading_mode = 2
+albedo_texture = ExtResource("1_ongke")
+emission_energy_multiplier = 16.3
+texture_filter = 2

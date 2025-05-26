@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://6ij4vd61fvpa"]
+
+[ext_resource type="Texture2D" uid="uid://cclqdfx15gecu" path="res://environment/assets/materials/trashbin.png" id="1_aslv1"]
+
+[resource]
+shading_mode = 2
+albedo_texture = ExtResource("1_aslv1")
+texture_filter = 2
