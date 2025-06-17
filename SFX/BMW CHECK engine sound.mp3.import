@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnjluf7x1ngev"
+path="res://.godot/imported/BMW CHECK engine sound.mp3-c765693c09368feb2d3e639a445546fc.mp3str"
+
+[deps]
+
+source_file="res://SFX/BMW CHECK engine sound.mp3"
+dest_files=["res://.godot/imported/BMW CHECK engine sound.mp3-c765693c09368feb2d3e639a445546fc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

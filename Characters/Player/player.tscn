@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://bosesbvnakx3t"]
+[gd_scene load_steps=52 format=4 uid="uid://bosesbvnakx3t"]
 
 [ext_resource type="Script" uid="uid://c8e6rgh2n3r7o" path="res://Characters/Player/player.gd" id="1_7n32i"]
 [ext_resource type="PackedScene" uid="uid://efhaiq50xokb" path="res://Characters/character_mover.tscn" id="2_vtwgx"]
@@ -29,6 +29,7 @@
 [ext_resource type="Script" uid="uid://cv323lej4ombp" path="res://Characters/Player/step_track.gd" id="26_o3aog"]
 [ext_resource type="Theme" uid="uid://do2yhap1r7utx" path="res://UI/main_theme.tres" id="26_v0k0y"]
 [ext_resource type="Script" uid="uid://g5f41mr62r5w" path="res://Characters/Player/stats_display.gd" id="27_s0xdn"]
+[ext_resource type="PackedScene" uid="uid://cwhi2nn57vb0f" path="res://main_menu.tscn" id="30_e3hdo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jyx7a"]
 
@@ -445,6 +446,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("25_7b6hw")
+main_menu = ExtResource("30_e3hdo")
 
 [node name="ColorRect" type="ColorRect" parent="PlayerUI/DeathScreen"]
 layout_mode = 1
@@ -497,6 +499,22 @@ grow_vertical = 0
 scale = Vector2(0.5, 0.39)
 text = "Restart"
 
+[node name="MainMenuButton" type="Button" parent="PlayerUI/DeathScreen/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.3892
+offset_top = -119.586
+offset_right = 182.611
+offset_bottom = -56.5861
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.5, 0.39)
+text = "Main Menu"
+
 [node name="QuitButton" type="Button" parent="PlayerUI/DeathScreen/Panel"]
 layout_mode = 1
 anchors_preset = 7
@@ -505,9 +523,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -47.268
-offset_top = -119.586
+offset_top = -94.6871
 offset_right = 141.732
-offset_bottom = -56.5861
+offset_bottom = -31.6872
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.5, 0.39)

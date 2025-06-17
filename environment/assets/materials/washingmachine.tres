@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bk5vh12fy214a"]
+
+[ext_resource type="Texture2D" uid="uid://q2cf5lne8rfi" path="res://environment/assets/materials/washing_text.png" id="1_l32dk"]
+
+[resource]
+albedo_texture = ExtResource("1_l32dk")
+metallic = 0.36
+metallic_specular = 0.0
+texture_filter = 2

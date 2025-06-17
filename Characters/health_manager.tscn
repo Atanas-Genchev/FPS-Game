@@ -4,6 +4,7 @@
 
 [node name="HealthManager" type="Node3D"]
 script = ExtResource("1_arrfg")
+verbose = false
 
 [node name="BloodRaycast" type="RayCast3D" parent="."]
 enabled = false

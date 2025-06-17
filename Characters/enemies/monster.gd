@@ -17,6 +17,7 @@ var cur_state = STATES.IDLE
 @export var attack_range = 2.0
 @export var damage = 15
 @export var attack_speed_modifier = 1.0
+signal dead
 
 func _ready():
 	var hitboxes = find_children("*", "HitBox")
@@ -57,6 +58,7 @@ func set_state(state: STATES):
 			collision_layer = 0
 			collision_mask = 1
 			ai_character_mover.stop_moving()
+			dead.emit()
 
 func _process(delta):
 	match cur_state:

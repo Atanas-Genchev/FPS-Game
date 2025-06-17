@@ -44,9 +44,8 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vpl2o")
 
 [node name="SmgAmmoPickUp" instance=ExtResource("1_yrv4n")]
-pick_up_type = 2
 weapon_type = 2
-pick_up_amount = 90
+pick_up_amount = 30
 
 [node name="makarov_ammo_box" parent="Graphics" index="0" instance=ExtResource("2_813xl")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, -0.0201435)

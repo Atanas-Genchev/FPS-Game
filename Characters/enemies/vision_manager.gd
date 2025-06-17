@@ -16,7 +16,6 @@ func can_see_target(target: Node3D):
 		return false
 	
 	if dist_to_target < always_detect_in_range:
-		print("can_seew")
 		return true
 	
 	if fwd.angle_to(dir_to_target) > deg_to_rad(sight_arc / 2.0):

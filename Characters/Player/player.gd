@@ -14,17 +14,9 @@ const HOTKEYS = {
 	KEY_1: 0,
 	KEY_2: 1,
 	KEY_3: 2,
-	KEY_4: 3,
-	KEY_5: 4,
-	KEY_6: 5,
-	KEY_7: 6,
-	KEY_8: 7,
-	KEY_9: 8,
-	KEY_0: 9,
 }
 
 var dead = false
-
 
 
 func _ready():
@@ -47,13 +39,7 @@ func _input(event):
 	if event is InputEventKey and event.pressed and event.keycode in HOTKEYS:
 		weapon_manager.switch_to_weapon_slot(HOTKEYS[event.keycode], false)
 
-func _process(delta):
-	if Input.is_action_just_pressed("quit"):
-		get_tree().change_scene_to_file("res://main_menu.tscn")
-	if Input.is_action_just_pressed("restart"):
-		get_tree().call_group("instanced", "queue_free")
-		get_tree().reload_current_scene()
-	
+func _process(delta):	
 	
 	if dead:
 		return
